@@ -31,7 +31,7 @@
         }
         pre {
             background-color: #f6f8fa;
-            padding: 16px;
+            padding: 8px;
             border-radius: 6px;
             overflow-x: auto;
         }
@@ -72,11 +72,14 @@
 
     <h2>Step 2: Route Strudel Audio to VB-Cable</h2>
     <p>In Strudel (or your browser), set your audio output to "VB-Cable Input". This sends all your Strudel sound into the virtual cable instead of your speakers.</p>
-    <p>If you're using SuperCollider with Strudel, you set SuperCollider's audio output to VB-Cable. Same idea.</p>
+
+    <img src="1.png">
+
+        <p>If you're using SuperCollider with Strudel, you set SuperCollider's audio output to VB-Cable. Same idea.</p>
 
     <h2>Step 3: Set TouchDesigner Audio Input</h2>
     <p>In TouchDesigner, add an <strong>Audio Device In CHOP</strong>. Set its device to "VB-Cable Output" (yes, output—you're receiving what VB-Cable is outputting). Now TD is listening to whatever Strudel is sending.</p>
-
+<img src="2.png" height="700">
     <h2>Step 4: Analyze the Audio</h2>
     <p>Use CHOPs to analyze the incoming audio:</p>
     <ul>
@@ -85,6 +88,7 @@
         <li><strong>Math CHOPs</strong> to scale/smooth the values</li>
     </ul>
 
+    <a href="audioviz.toe"><h1>Heres an audio reactive TouchDesigner project for you to play with!</h1></a>
     <h2>Step 5: Map to Visuals</h2>
     <p>Take those CHOP values and drive whatever—geometry transforms, shader parameters, particle systems, whatever you're projecting. The audio becomes control data for your visuals.</p>
 
